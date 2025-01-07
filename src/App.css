@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+                         /* Custom Card Styling */
+
+
+
+
+.custom-card {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Hover Effect */
+  .custom-card:hover {
+    transform: scale(0.98); /* Slight zoom out effect */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow for emphasis */
+  }
+  
+  /* Serial Number on Right */
+  .serial-number {
+    background-color: rgb(0, 204, 255); /* Blue background */
+    color: #fff; /* White text */
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ 
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .card-text {
+    flex: 1; 
+  }
+  
+  .card-title {
+    margin-bottom: 15px; 
+  }
+
+
+                        /* {          city collectoin section  } */
+
+  .custom-city-card {
+    border: none;
+    overflow: hidden;
+  }
+
+  .custom-city-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card-img-container {
+    position: relative;
+  }
+
+  .custom-city-img:hover {
+    transform: scale(1.1);
+  }
+
+  .card-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .custom-city-img:hover + .card-overlay {
+    opacity: 1;
+  }
+  
+
+
+
+
+                          /*  footer style   */
+
+
+.global-footer__pcln-group-logos__headline {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+
+}
+.global-footer__pcln-group-logos__list img {
+  max-width: 100px;
+  height: auto;
+
+}
+.fPriceline{
+  margin-top: 50px;
+  background-color:  #001832;
+}
+
+
+
+                            /*      Blog Styling          */
+
+
+       /* Host Investment Banner */
+.host-investment-banner {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.host-investment-banner-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Host Car Sharing Section */
+.host-car-sharing {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+
+.host-car-sharing-benefits-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.host-car-sharing-benefits-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.host-car-sharing-benefits-blocks-block {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.host-car-sharing-benefits-blocks-block:hover {
+  transform: translateY(-10px);
+}
+
+.host-car-sharing-benefits-blocks-block-image-container img {
+  max-width: 50px;
+  margin-bottom: 15px;
+}
+
+.host-car-sharing-benefits-blocks-block-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(0, 204, 255);
+  margin-bottom: 10px;
+}
+
+.host-car-sharing-benefits-blocks-block-description {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .host-car-sharing-benefits-blocks-block {
+      flex: 1 0 45%;
+      margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .host-car-sharing-benefits-blocks-block {
+      flex: 1 0 90%;
+  }
+}
+
+
+
+
+
+
+
+
+                                                /* Offer Page Container */
+
+
+
+
+
+
+.offer-container {
+  padding: 0 15px;
+}
+
+.offer-title h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Banner Grid */
+#hp-banner-container-new {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.offer-banner {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.offer-banner:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #hp-banner-container-new .col-md-4 {
+      flex: 1 0 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  #hp-banner-container-new .col-md-4 {
+      flex: 1 0 100%;
+  }
+}
+
+/* General Styling */
+.offer-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.offer-banner {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-banner:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Host Share and Earn Section */
+.host-share-earn-steps-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgb(0, 204, 255);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.host-share-earn-steps-blocks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.host-share-earn-steps-blocks-block {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.host-share-earn-steps-blocks-block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.host-share-earn-steps-blocks-block-image-container img {
+  max-width: 80px;
+  max-height: 80px;
+  margin: 0 auto;
+  display: block;
+}
+
+.host-share-earn-steps-blocks-block-content-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+.host-share-earn-steps-blocks-block-content-description {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+.host-share-earn-steps-blocks-block-content-description-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.host-share-earn-steps-blocks-block-content-description-button:hover {
+  background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .offer-banner {
+      width: 100%;
+  }
+
+  .host-share-earn-steps-title {
+      font-size: 1.5rem;
+  }
+
+  .host-share-earn-steps-blocks-block {
+      width: 100%;
+  }
+}
+
+
+                          /*                 Car        Section               */
+
+
+
+
+/* Car Card Styles */
+.car-card {
+  width: 100%;
+  max-width: 18rem;
+  margin: 0 auto;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Action Buttons */
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.w-48 {
+  width: 48%;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+
+
+
+
+                      /*      navbar           */
+
+
+
+
+                      
