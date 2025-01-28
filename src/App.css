@@ -60,6 +60,7 @@
   .custom-city-card {
     border: none;
     overflow: hidden;
+    margin-bottom: 15px;
   }
 
   .custom-city-img {
@@ -103,20 +104,47 @@
                           /*  footer style   */
 
 
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+}
+
 .global-footer__pcln-group-logos__headline {
   font-size: 1rem;
   text-align: center;
   margin-bottom: 1rem;
-
 }
+
 .global-footer__pcln-group-logos__list img {
   max-width: 100px;
   height: auto;
-
 }
-.fPriceline{
+
+.fPriceline {
   margin-top: 50px;
-  background-color:  #001832;
+  background-color: #001832;
 }
 
 
@@ -356,11 +384,10 @@
 
 
 
-
 /* Car Card Styles */
 .car-card {
   width: 100%;
-  max-width: 18rem;
+  max-width: 16rem; /* Reduce the max-width to make the card smaller */
   margin: 0 auto;
   margin-top: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -395,13 +422,63 @@
   margin-top: auto;
 }
 
+/* Button Styles */
+.btn {
+  height: 40px; /* Set a fixed height for buttons */
+  border-radius: 5px; /* Add border radius */
+  padding: 0 10px; /* Add padding to ensure text fits within the button */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+}
 
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
 
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Add hover effect */
+}
 
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
 
-                      /*      navbar           */
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: scale(1.05); /* Add hover effect */
+}
 
+/* Add margin to the bottom of the card section */
+.card-section {
+  margin-bottom: 40px; /* Increase the value to add more distance from the footer */
+}
 
+/* Footer styling */
+footer {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px; /* Add top padding */
+}
 
+.global-footer__pcln-group-logos__headline {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-                      
+.global-footer__pcln-group-logos__list img {
+  max-width: 100px;
+  height: auto;
+}
+
+.fPriceline {
+  margin-top: 50px;
+  background-color: #001832;
+}

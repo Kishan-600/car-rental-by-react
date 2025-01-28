@@ -1,11 +1,11 @@
-import React from 'react';
-import { Card, Row, Col } from 'react-bootstrap';
-import { CartPlus, CreditCard } from 'react-bootstrap-icons';
+import React, { useContext } from 'react';
+import { Card, Row, Col, Button } from 'react-bootstrap';
+import { CartContext } from '../context/CartContext';
 import car1 from '../img/car1.jpg';
 import car2 from '../img/car2.jpg';
 import car3 from '../img/car3.png';
 import car4 from '../img/car4.jpg';
-import car5 from '../img/car5.png';
+import car5 from '../img/car10.jpg';
 import car6 from '../img/car6.png';
 import car7 from '../img/car7.jpg';
 import car8 from '../img/car8.png';
@@ -15,14 +15,16 @@ import car11 from '../img/car11.jpg';
 import car12 from '../img/car12.jpg';
 import car13 from '../img/car13.png';
 import car14 from '../img/car14.png';
-import car15 from '../img/car15.png';
+import car15 from '../img/car3.png';
 import car16 from '../img/car16.jpg';
 import car17 from '../img/car17.png';
 import car18 from '../img/car21.jpg';
 import car19 from '../img/car19.jpg';
-import car20 from '../img/car20.png';
+import car20 from '../img/car16.jpg';
 
 const Car = () => {
+  const { addToCart } = useContext(CartContext);
+
   const cars = [
     {
       image: car1,
@@ -32,93 +34,93 @@ const Car = () => {
     },
     {
       image: car2,
-      name: 'Hyundai i10',
-      price: 2580,
-      description: 'A small and reliable city car for daily use.'
+      name: 'Hyundai i20',
+      price: 2500,
+      description: 'A stylish hatchback with advanced features.'
     },
     {
       image: car3,
       name: 'Honda City',
       price: 3000,
-      description: 'A stylish sedan with luxury features.'
+      description: 'A premium sedan with a comfortable ride.'
     },
     {
       image: car4,
-      name: 'Toyota Corolla',
-      price: 4500,
-      description: 'A premium sedan known for its comfort and performance.'
+      name: 'Toyota Innova',
+      price: 5000,
+      description: 'A spacious MPV perfect for family trips.'
     },
     {
       image: car5,
-      name: 'Suzuki WagonR',
-      price: 2100,
-      description: 'An affordable hatchback with spacious interiors.'
+      name: 'Ford EcoSport',
+      price: 3500,
+      description: 'A compact SUV with a sporty design.'
     },
     {
       image: car6,
-      name: 'Kia Seltos',
-      price: 5500,
-      description: 'A modern SUV with advanced features.'
+      name: 'Mahindra Thar',
+      price: 4500,
+      description: 'An off-road SUV with rugged capabilities.'
     },
     {
       image: car7,
-      name: 'BMW 3 Series',
-      price: 7000,
-      description: 'A luxury sedan known for its performance and design.'
+      name: 'Tata Nexon',
+      price: 3200,
+      description: 'A compact SUV with a 5-star safety rating.'
     },
     {
       image: car8,
-      name: 'Audi A4',
-      price: 8000,
-      description: 'A premium sedan with top-notch luxury features.'
+      name: 'Kia Seltos',
+      price: 4000,
+      description: 'A stylish SUV with modern features.'
     },
     {
       image: car9,
-      name: 'Maruti Vitara Brezza',
-      price: 3500,
-      description: 'A compact SUV with robust build quality.'
+      name: 'MG Hector',
+      price: 4200,
+      description: 'A mid-size SUV with a spacious interior.'
     },
     {
       image: car10,
-      name: 'Ford Ecosport',
-      price: 4000,
-      description: 'A compact SUV with good performance and space.'
+      name: 'Renault Duster',
+      price: 3800,
+      description: 'A rugged SUV with a powerful engine.'
     },
     {
       image: car11,
-      name: 'Honda CR-V',
-      price: 6500,
-      description: 'A comfortable and reliable SUV.'
+      name: 'Skoda Rapid',
+      price: 2900,
+      description: 'A premium sedan with a sleek design.'
     },
     {
       image: car12,
-      name: 'Toyota Fortuner',
-      price: 9000,
-      description: 'A luxury SUV with high-end features.'
+      name: 'Volkswagen Vento',
+      price: 3100,
+      description: 'A German-engineered sedan with superior handling.'
     },
     {
       image: car13,
-      name: 'Mahindra Thar',
-      price: 5000,
-      description: 'An iconic off-roading SUV with rugged build.'
+      name: 'Nissan Magnite',
+      price: 3300,
+      description: 'A compact SUV with a bold design.'
     },
     {
       image: car14,
-      name: 'Renault Kwid',
-      price: 1800,
-      description: 'An entry-level hatchback with decent features.'
+      name: 'Hyundai Creta',
+      price: 3700,
+      description: 'A popular SUV with advanced features.'
     },
     {
       image: car15,
-      name: 'Skoda Rapid',
-      price: 3200,
-      description: 'A mid-size sedan with great performance and space.'
+      name: 'Honda Amaze',
+      price: 2800,
+      description: 'A compact sedan with a comfortable ride.'
     },
     {
       image: car16,
-      name: 'Nissan Micra',
-      price: 2400,
-      description: 'A compact and efficient city car.'
+      name: 'Toyota Fortuner',
+      price: 6000,
+      description: 'A full-size SUV with a powerful engine.'
     },
     {
       image: car17,
@@ -147,10 +149,10 @@ const Car = () => {
   ];
 
   return (
-    <Row className="g-4">
+    <Row className="g-4 card-section">
       {cars.map((car, index) => (
         <Col md={3} key={index}>
-          <Card className="car-card" style={{height:'400px'}}>
+          <Card className="car-card" style={{ height: '350px' }}>
             <Card.Img variant="top" src={car.image} alt={car.name} />
             <Card.Body>
               <Card.Title className="text-center fw-bold">{car.name}</Card.Title>
@@ -159,14 +161,16 @@ const Car = () => {
               </Card.Text>
               <Card.Text className="text-muted">{car.description}</Card.Text>
               <div className="d-flex justify-content-between mt-auto">
-                <a href="buy.html" className="btn btn-primary w-48">
-                  <CartPlus className="mr-2" />
+                <Button variant="primary" className="w-48" href="buy.html">
                   Buy
-                </a>
-                <a href="cart.html" className="btn btn-secondary w-48">
-                  <CreditCard className="mr-2" />
+                </Button>
+                <Button
+                  variant="secondary"
+                  className="w-48"
+                  onClick={() => addToCart(car)}
+                >
                   Add to Cart
-                </a>
+                </Button>
               </div>
             </Card.Body>
           </Card>

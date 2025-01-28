@@ -55,7 +55,7 @@ function Navbar() {
               </li>
 
               <li className="nav-item mx-3">
-                <Link className="nav-link active fw-bold" to="#">
+                <Link className="nav-link active fw-bold" to="/Shops">
                   Shops
                 </Link>
               </li>
